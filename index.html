@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Work+Sans&family=Young+Serif&display=swap" rel="stylesheet">
+    <title>Match History</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script></head>
+<body>
+    <div class="c-search-container">
+        <h1>Match History</h1>
+        <div class="c-search-wrapper">
+            <div class="c-search-selector-container">
+                <label class="c-search-selector-label" for="regionSelector">Region:</label>
+                <select class="c-search-selector" id="regionSelector">
+                    <option value="EUW">Europe West</option>
+                    <option value="NA">North America</option>
+                </select>
+            </div>
+            <div class="c-search-input-container">
+                <label class="c-search-input-label" for="userInput">Summoner Name:</label>
+                <input class="c-search-input" type="text" id="userInput" placeholder="Summoner">
+                <button class="c-search-button" id="submitButton">Search</button>
+            </div>
+        </div>
+    </div>
+    <div class="matches u-hidden" id="div2">
+        <div class="match win">
+            <div class="summary">
+                <div>
+                    <p class="gameMode">Normal</p>
+                    <p>2 days ago</p>
+                    <hr>
+                    <p class="outcome">Victory</p>
+                    <p>35m 28s</p>
+                </div>
+                <div class="kda">
+                    <img src="images/Qiyana.webp" alt="Qiyana">
+                    <p>16/<strong>12</strong>/14</p>
+                </div>
+            </div>
+            <div class="summoners">
+                <ul>
+                    <li><img src="images/Ezreal.webp" alt="Ezreal">KC ECARTER</li>
+                    <li><img src="images/Ryze.webp" alt="Ryze">Numlest</li>
+                    <li class="player"><img src="images/Qiyana.webp" alt="Qiyana">Gnomez</li>
+                    <li><img src="images/Quinn.webp" alt="Quinn">m0ret</li>
+                    <li><img src="images/Sona.webp" alt="Sona">Muesli</li>
+                </ul>
+                <ul>
+                    <li><img src="images/Udyr.webp" alt="Udyr">NoSylar</li>
+                    <li><img src="images/Briar.webp" alt="Briar">Qeroksen</li>
+                    <li><img src="images/Hwei.webp" alt="Hwei">BeastCreator</li>
+                    <li><img src="images/Samira.webp" alt="Samira">10PDFs1Match</li>
+                    <li><img src="images/Leona.webp" alt="Leona">ajax007</li>
+                </ul>
+            </div>
+            <button class="statsButton buttonRadius">stats</button>
+            <div class="chart u-hiddenStats" id="matchChart1"></div>
+        </div>
+        <div class="match lose">
+            <div class="summary">
+                <div>
+                    <p class="gameMode">ARAM</p>
+                    <p>3 days ago</p>
+                    <hr>
+                    <p class="outcome">Defeat</p>
+                    <p>14m 1s</p>
+                </div>
+                <div class="kda">
+                    <img src="images/Varus.webp" alt="Varus">
+                    <p>11/<strong>10</strong>/16</p>
+                </div>
+            </div>
+            <div class="summoners">
+                <ul>
+                    <li><img src="images/Lux.webp" alt="Lux">andreabis</li>
+                    <li><img src="images/Chogath.webp" alt="Chogath">NiuBi4</li>
+                    <li><img src="images/Orianna.webp" alt="Orianna">Enceladus</li>
+                    <li><img src="images/Soraka.webp" alt="Soraka">Daënara</li>
+                    <li><img src="images/Sett.webp" alt="Sett">JeanJacques667</li>
+                </ul>
+                <ul>
+                    <li><img src="images/Morgana.webp" alt="Morgana">LaggeLie</li>
+                    <li class="player"><img src="images/Varus.webp" alt="Varus">Gnomez</li>
+                    <li><img src="images/Lulu.webp" alt="Lulu">AntoneLe100</li>
+                    <li><img src="images/Zoe.webp" alt="Zoe">BambusBjörn</li>
+                    <li><img src="images/Gwen.webp" alt="Gwen">IchKnickDich</li>
+                </ul>
+            </div>
+            <button class="statsButton buttonRadius">stats</button>
+            <div class="chart u-hiddenStats" id="matchChart2"></div>
+        </div>
+        <div class="match win">
+            <div class="summary">
+                <div>
+                    <p class="gameMode">Normal</p>
+                    <p>3 days ago</p>
+                    <hr>
+                    <p class="outcome">Victory</p>
+                    <p>24m 12s</p>
+                </div>
+                <div class="kda">
+                    <img src="images/Qiyana.webp" alt="Qiyana">
+                    <p>10/<strong>4</strong>/5</p>
+                </div>
+            </div>
+            <div class="summoners">
+                <ul>
+                    <li><img src="images/Singed.webp" alt="Singed">Marrrja</li>
+                    <li><img src="images/Viego.webp" alt="Viego">ShipuMiJaja</li>
+                    <li class="player"><img src="images/Qiyana.webp" alt="Qiyana">Gnomez</li>
+                    <li><img src="images/Varus.webp" alt="Varus">Black Curse</li>
+                    <li><img src="images/Milio.webp" alt="Milio">LavenderBeast</li>
+                </ul>
+                <ul>
+                    <li><img src="images/Jax.webp" alt="Jax">MyNameIsBanana</li>
+                    <li><img src="images/Maokai.webp" alt="Maokai">UseMyDamnLantern</li>
+                    <li><img src="images/Sylas.webp" alt="Sylas">IVEtingUntilEnd</li>
+                    <li><img src="images/Caitlyn.webp" alt="Caitlyn">O  Β Ξ      O</li>
+                    <li><img src="images/Pyke.webp" alt="Pyke">Ara Sasha</li>
+                </ul>
+            </div>
+            <button class="statsButton buttonRadius">stats</button>
+            <div class="chart u-hiddenStats" id="matchChart3"></div>
+        </div>
+        <div class="match lose">
+            <div class="summary">
+                <div>
+                    <p class="gameMode">Normal</p>
+                    <p>4 days ago</p>
+                    <hr>
+                    <p class="outcome">Defeat</p>
+                    <p>30m 32s</p>
+                </div>
+                <div class="kda">
+                    <img src="images/Ezreal.webp" alt="Ezreal">
+                    <p>1/<strong>5</strong>/1</p>
+                </div>
+            </div>
+            <div class="summoners">
+                <ul>
+                    <li><img src="images/Mordekaiser.webp" alt="Mordekaiser">Javivi</li>
+                    <li><img src="images/MasterYi.webp" alt="MasterYi">I J I N X I</li>
+                    <li><img src="images/Annie.webp" alt="Annie">Carba33</li>
+                    <li><img src="images/Lucian.webp" alt="Lucian">Mentally Jhin</li>
+                    <li><img src="images/Nami.webp" alt="Nami">lilAmiz</li>
+                </ul>
+                <ul>
+                    <li><img src="images/KSante.webp" alt="KSante">Eragon</li>
+                    <li><img src="images/Ivern.webp" alt="Ivern">NWKZeleph</li>
+                    <li><img src="images/Jayce.webp" alt="Jayce">MoonaryTiti</li>
+                    <li class="player"><img src="images/Ezreal.webp" alt="Ezreal">Gnomez</li>
+                    <li><img src="images/Xerath.webp" alt="Xerath">W oczku</li>
+                </ul>
+            </div>
+            <button class="statsButton buttonRadius">stats</button>
+            <div class="chart u-hiddenStats" id="matchChart4"></div>
+        </div>
+        <div class="match lose">
+            <div class="summary">
+                <div>
+                    <p class="gameMode">Quickplay</p>
+                    <p>4 days ago</p>
+                    <hr>
+                    <p class="outcome">Defeat</p>
+                    <p>10m 44s</p>
+                </div>
+                <div class="kda">
+                    <img src="images/Hwei.webp" alt="Hwei">
+                    <p>3/<strong>4</strong>/0</p>
+                </div>
+            </div>
+            <div class="summoners">
+                <ul>
+                    <li class="player"><img src="images/Hwei.webp" alt="Hwei">Gnomez</li>
+                    <li><img src="images/Hecarim.webp" alt="Hecarim">dummy</li>
+                    <li><img src="images/Gragas.webp" alt="Gragas">MrToyce</li>
+                    <li><img src="images/Akshan.webp" alt="Akshan">Be Fruit 29</li>
+                    <li><img src="images/Lux.webp" alt="Lux">JustPewPew</li>
+                </ul>
+                <ul>
+                    <li><img src="images/Cassiopeia.webp" alt="Cassiopeia">Torim le borgne</li>
+                    <li><img src="images/Brand.webp" alt="Brand">Kiohmay</li>
+                    <li><img src="images/Ekko.webp" alt="Ekko">Lilio</li>
+                    <li><img src="images/Samira.webp" alt="Samira">Deezneedfriends</li>
+                    <li><img src="images/Lux.webp" alt="Lux">simplyale</li>
+                </ul>
+            </div>
+            <button class="statsButton buttonRadius">stats</button>
+            <div class="chart u-hiddenStats" id="matchChart5"></div>
+        </div>
+    </div>
+</body>
+</html>
